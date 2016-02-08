@@ -8,12 +8,12 @@ use Symfony\Component\Config\Definition\Builder\TreeBuilder;
  * Class CommonBundleConfiguration
  * @package HOB\CommonBundle\DependencyInjection
  */
-class CommonBundleConfiguration implements ConfigurationInterface
+class CommonConfiguration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
         $treeBuilder    = new TreeBuilder();
-        $rootNode       = $treeBuilder->root('hob.common_bundle');
+        $rootNode       = $treeBuilder->root('hob_common_bundle');
 
         return $treeBuilder;
     }

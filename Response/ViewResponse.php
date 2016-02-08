@@ -2,9 +2,9 @@
 namespace HOB\CommonBundle\Response;
 
 use Doctrine\ORM\Tools\Pagination\Paginator;
+use FOS\RestBundle\Context\Context;
 use FOS\RestBundle\View\View;
 use HOB\CommonBundle\Pagination\Pagination;
-use JMS\Serializer\SerializationContext;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -44,10 +44,10 @@ class ViewResponse
 
         $view->setHeaders($headers);
 
-        $context = new SerializationContext();
-        $context->setGroups($serializerGroups);
+        $context = new Context();
+        $context->addGroups($serializerGroups);
 
-        $view->setSerializationContext($context);
+        $view->setContext($context);
 
         return $view;
     }
