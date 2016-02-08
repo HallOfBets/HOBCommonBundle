@@ -1,0 +1,22 @@
+{
+  "name": "hob/common-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony Common bundle for HOB",
+  "homepage": "https://github.com/sportnco",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexis CASSAN",
+      "email": "alexiscassan@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.9",
+    "symfony/framework-bundle": "~2.3|~3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "HOB\\CommonBundle\\": ""
+    }
+  }
+}
