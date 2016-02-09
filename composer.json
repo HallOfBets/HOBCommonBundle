@@ -2,7 +2,7 @@
   "name": "hob/common-bundle",
   "type": "symfony-bundle",
   "description": "Symfony Common bundle for HOB",
-  "homepage": "https://github.com/sportnco",
+  "homepage": "https://github.com/HallOfBets",
   "license": "MIT",
   "authors": [
     {
