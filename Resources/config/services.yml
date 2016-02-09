@@ -6,7 +6,6 @@ parameters:
     hob.common.jwt.jwtencoder.privateKey: ~
     hob.common.jwt.jwtencoder.publicKey: ~
     hob.common.jwt.jwtencoder.passPhrase: ~
-    hob.common.jwt.ttl: 60
 
 services:
 
@@ -37,6 +36,3 @@ services:
         class: HOB\CommonBundle\JWT\Encoder\JWTEncoder
         arguments: ['%hob.common.jwt.jwtencoder.privateKey%','%hob.common.jwt.jwtencoder.publicKey%','%hob.common.jwt.jwtencoder.passPhrase%']
 
-    hob.common.jwt.manager:
-        class: HOB\CommonBundle\JWT\JWTManager
-        arguments: ['@hob.common.jwt.jwtencoder', '%hob.common.jwt.ttl%']
