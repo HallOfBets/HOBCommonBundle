@@ -3,9 +3,6 @@
 parameters:
     hob.mailer.from: ~
     hob.response.pagination.header: 'X-Pagination-'
-    hob.common.jwt.jwtencoder.privateKey: ~
-    hob.common.jwt.jwtencoder.publicKey: ~
-    hob.common.jwt.jwtencoder.passPhrase: ~
 
 services:
 
@@ -31,8 +28,3 @@ services:
     hob.common.pagination:
         class: HOB\CommonBundle\Pagination\Pagination
         arguments: ['%hob.response.pagination.header%', '@router']
-
-    hob.common.jwt.jwtencoder:
-        class: HOB\CommonBundle\JWT\Encoder\JWTEncoder
-        arguments: ['%hob.common.jwt.jwtencoder.privateKey%','%hob.common.jwt.jwtencoder.publicKey%','%hob.common.jwt.jwtencoder.passPhrase%']
-
