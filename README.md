@@ -1,6 +1,6 @@
 # Utils for HOB micro services 
 
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/7bd27a8a-2f53-4f54-b96b-1ab4e7aadb93/big.png)](https://insight.sensiolabs.com/projects/7bd27a8a-2f53-4f54-b96b-1ab4e7aadb93)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/99f5d9c0-4be8-4aa2-975c-f9859785c498/big.png)](https://insight.sensiolabs.com/projects/99f5d9c0-4be8-4aa2-975c-f9859785c498)
 
 ## Installation
 To install this bundle, run the command below and you will get the latest version.
