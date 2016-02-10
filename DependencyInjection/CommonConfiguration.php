@@ -15,6 +15,9 @@ class CommonConfiguration implements ConfigurationInterface
         $treeBuilder    = new TreeBuilder();
         $rootNode       = $treeBuilder->root('hob_common_bundle');
 
+        $rootNode->children()
+        ->end();
+
         return $treeBuilder;
     }
 }
