@@ -36,10 +36,23 @@ class ViewResponse
      */
     public function createView(Request $request, array $parameters, Paginator $paginator, array $serializerGroups = [])
     {
-        $view       = View::create($paginator->getQuery()->getResult());
+        return $this->create($request, $parameters, $paginator->getQuery()->getResult(), $paginator->count(), $serializerGroups);
+    }
+
+    /**
+     * @param Request $request
+     * @param array $parameters
+     * @param $viewContent
+     * @param $itemsNumber
+     * @param array $serializerGroups
+     * @return View
+     */
+    public function create(Request $request, array $parameters, $viewContent, $itemsNumber, array $serializerGroups = [])
+    {
+        $view       = View::create($viewContent);
         $headers    = $view->getHeaders();
 
-        $paginationHeader   = $this->pagination->getHeader($request->get('_route'), $paginator, $parameters);
+        $paginationHeader   = $this->pagination->getHeader($request->get('_route'), $itemsNumber, $parameters);
         $headers            = array_merge($headers, $paginationHeader);
 
         $view->setHeaders($headers);

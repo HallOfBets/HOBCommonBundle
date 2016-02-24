@@ -33,13 +33,13 @@ class Pagination
 
     /**
      * @param $route
-     * @param Paginator $paginator
+     * @param integer $itemsNumber
      * @param array $urlParameters
      * @return array
      */
-    public function getHeader($route, Paginator $paginator, array $urlParameters)
+    public function getHeader($route, $itemsNumber, array $urlParameters)
     {
-        $items       = $paginator->count();
+        $items       = $itemsNumber;
         $currentPage = $urlParameters['page'];
         $pageItems   = $urlParameters['pageItems'];
         $maxPage     = ceil($items/$pageItems);
